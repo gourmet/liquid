@@ -20,6 +20,7 @@ class View extends CakeView {
 		} else if (empty($this->liquid)) {
 			$this->liquid = new Template();
 			$this->liquid->registerFilter($this);
+			$this->liquid->registerFilter(new Filter\CakeFilter());
 		}
 		return $this->liquid;
 	}
