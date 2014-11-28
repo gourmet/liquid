@@ -21,7 +21,32 @@ Because this plugin has the type `cakephp-plugin` set in its own `composer.json`
 in your `vendor-dir`. It is recommended that you add /plugins/gourmet/liquid to your
 `.gitignore` file and here's [why][composer:ignore].
 
-TODO: ADD MORE DETAILS HERE
+You then need to load the plugin. In `boostrap.php`, something like:
+
+```php
+\Cake\Core\Plugin::load('Gourmet/Liquid');
+```
+
+You can then define any controller (or email) view class like so:
+
+```php
+// in ProductsController.php beforeFilter
+$this->viewClass = '\Gourmet\Liquid\View\View';
+
+// passed to any email configuration as the 'viewRender' key and use it:
+Email::config(['user' => ['viewRender' => '\Gourmet\Liquid\View\View']]);
+$email = new Email('user');
+$email->template('Hello {{ name }}', "{{ 'content' | fetch }}\n\nThis is an automated email.")
+    ->to('baker@cakephp.org')
+    ->viewVars(['name' => 'Baker'])
+    ->send();
+```
+
+More documentation/filters/tags to come.
+
+In the meantime, read more about the library this plugin wraps over [here](/kalimatas/php-liquid)
+and about the liquid markup [here](https://github.com/Shopify/liquid/wiki) and
+[here](http://docs.shopify.com/themes/liquid-documentation/).
 
 That's it!
 
