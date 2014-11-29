@@ -28,7 +28,7 @@
 	, "require": {
 		"cakephp/cakephp": "3.0.*-dev"
 		, "cakephp/plugin-installer": "*"
-		, "liquid/liquid": "dev-master#62265dcdcc8dd0ee7f92709351b81c6d59671d2e"
+		, "liquid/liquid": "dev-master#ca4b64f94948997cbd939d81745a4062f1dfd949"
 	}
 	, "require-dev": {
 		"phpunit/phpunit": "4.1.*"

@@ -3,10 +3,24 @@
 namespace Gourmet\Liquid\Test\View;
 
 use Cake\Controller\Controller;
+use Cake\ORM\Entity;
 use Cake\Network\Request;
 use Cake\Network\Response;
 use Cake\TestSuite\TestCase;
 use Gourmet\Liquid\View\LiquidView;
+
+class Post extends Entity {
+
+	protected $_virtual = ['url'];
+
+	protected function _getUrl() {
+		return '/posts/' . $this->_properties['id'];
+	}
+
+	protected function _getEditUrl() {
+		return '/posts/edit/' . $this->_properties['id'];
+	}
+}
 
 class ViewTest extends TestCase {
 
@@ -62,6 +76,32 @@ class ViewTest extends TestCase {
 		);
 
 		$expected = "Hello Baker\n\nThis email was sent automatically.\n";
+		$this->assertEquals($expected, $output);
+	}
+
+	public function testRenderEntityObject() {
+		$post = $this->getMock('\Gourmet\Liquid\Test\View\Post', null, [['id' => 1, 'title' => 'foo', 'desc' => 'bar']]);
+
+		$output = $this->_render(
+			'Posts',
+			'<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>{% if post.edit_url %}<a href="{{ post.edit_url }}">edit</a>{% endif %}',
+			"{{ 'content' | fetch }}",
+			compact('post')
+		);
+
+		$expected = '<h1><a href="/posts/1">foo</a></h1>';
+		$this->assertEquals($expected, $output);
+
+		$post->virtualProperties(['edit_url', 'url']);
+
+		$output = $this->_render(
+			'Posts',
+			'<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>{% if post.edit_url %}<a href="{{ post.edit_url }}">edit</a>{% endif %}',
+			"{{ 'content' | fetch }}",
+			compact('post')
+		);
+
+		$expected = '<h1><a href="/posts/1">foo</a></h1><a href="/posts/edit/1">edit</a>';
 		$this->assertEquals($expected, $output);
 	}
 
