@@ -1,8 +1,8 @@
 # Liquid
 
-Built to enable [Liquid][liquid] templates in [CakePHP][cakephp].
+[![Build Status](https://travis-ci.org/gourmet/liquid.svg?branch=master)](https://travis-ci.org/gourmet/liquid)
 
-__This is an unstable repository and should be treated as an alpha.__
+Built to enable [Liquid][liquid] templates in [CakePHP][cakephp].
 
 ## Requirements
 
