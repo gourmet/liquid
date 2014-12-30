@@ -2,10 +2,11 @@
 
 namespace Gourmet\Liquid\View\Filter;
 
-class CakeFilter {
+class CakeFilter
+{
 
-	public function url($route) {
-		return \Cake\Routing\Router::url((array) json_decode($route));
-	}
-	
+    public function url($route)
+    {
+        return \Cake\Routing\Router::url((array)json_decode($route));
+    }
 }
