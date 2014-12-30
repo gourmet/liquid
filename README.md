@@ -18,7 +18,7 @@ composer require gourmet/liquid
 
 Because this plugin has the type `cakephp-plugin` set in its own `composer.json`,
 [Composer][composer] will install it inside your /plugins directory, rather than
-in your `vendor-dir`. It is recommended that you add /plugins/gourmet/liquid to your
+in your `vendor-dir`. It is recommended that you add /plugins/gourmet to your
 `.gitignore` file and here's [why][composer:ignore].
 
 You then need to load the plugin. In `boostrap.php`, something like:
@@ -49,6 +49,19 @@ and about the liquid markup [here](https://github.com/Shopify/liquid/wiki) and
 [here](http://docs.shopify.com/themes/liquid-documentation/).
 
 That's it!
+
+## Patches & Features
+
+* Fork
+* Mod, fix
+* Test - this is important, so it's not unintentionally broken
+* Commit - do not mess with license, todo, version, etc. (if you do change any, bump them into commits of
+their own that I can ignore when I pull)
+* Pull request - bonus point for topic branches
+
+## Bugs & Feedback
+
+http://github.com/gourmet/knp-menu/issues
 
 ## License
 
