@@ -1,6 +1,8 @@
 # Liquid
 
 [![Build Status](https://travis-ci.org/gourmet/liquid.svg?branch=master)](https://travis-ci.org/gourmet/liquid)
+[![Total Downloads](https://poser.pugx.org/gourmet/liquid/downloads.svg)](https://packagist.org/packages/gourmet/liquid)
+[![License](https://poser.pugx.org/gourmet/liquid/license.svg)](https://packagist.org/packages/gourmet/liquid)
 
 Built to enable [Liquid][liquid] templates in [CakePHP][cakephp].
 
