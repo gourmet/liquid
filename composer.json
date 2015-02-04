@@ -27,7 +27,6 @@
 	]
 	, "require": {
 		"cakephp/cakephp": "3.0.*-dev"
-		, "cakephp/plugin-installer": "*"
 		, "liquid/liquid": "dev-master#ca4b64f94948997cbd939d81745a4062f1dfd949"
 	}
 	, "require-dev": {
