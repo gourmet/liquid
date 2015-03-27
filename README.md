@@ -4,24 +4,15 @@
 [![Total Downloads](https://poser.pugx.org/gourmet/liquid/downloads.svg)](https://packagist.org/packages/gourmet/liquid)
 [![License](https://poser.pugx.org/gourmet/liquid/license.svg)](https://packagist.org/packages/gourmet/liquid)
 
-Built to enable [Liquid][liquid] templates in [CakePHP][cakephp].
-
-## Requirements
-
-* CakePHP 3.x
+Built to enable [Liquid] templates in [CakePHP 3].
 
 ## Install
 
-Using [Composer][composer]:
+Using [Composer]:
 
 ```
-composer require gourmet/liquid
+composer require gourmet/liquid:dev-master
 ```
-
-Because this plugin has the type `cakephp-plugin` set in its own `composer.json`,
-[Composer][composer] will install it inside your /plugins directory, rather than
-in your `vendor-dir`. It is recommended that you add /plugins/gourmet to your
-`.gitignore` file and here's [why][composer:ignore].
 
 You then need to load the plugin. In `boostrap.php`, something like:
 
@@ -67,10 +58,9 @@ http://github.com/gourmet/knp-menu/issues
 
 ## License
 
-Copyright (c) 2014, Jad Bitar and licensed under [The MIT License][mit].
+Copyright (c)2015, Jad Bitar and licensed under [The MIT License][mit].
 
-[cakephp]:http://cakephp.org
-[composer]:http://getcomposer.org
-[composer:ignore]:http://getcomposer.org/doc/faqs/should-i-commit-the-dependencies-in-my-vendor-directory.md
+[CakePHP 3]:http://cakephp.org
+[Composer]:http://getcomposer.org
 [mit]:http://www.opensource.org/licenses/mit-license.php
-[liquid]:https://github.com/Shopify/liquid
+[Liquid]:https://github.com/Shopify/liquid
