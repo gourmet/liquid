@@ -54,7 +54,7 @@ their own that I can ignore when I pull)
 
 ## Bugs & Feedback
 
-http://github.com/gourmet/knp-menu/issues
+http://github.com/gourmet/liquid/issues
 
 ## License
 
