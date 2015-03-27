@@ -11,7 +11,7 @@ Built to enable [Liquid] templates in [CakePHP 3].
 Using [Composer]:
 
 ```
-composer require gourmet/liquid:dev-master
+composer require gourmet/liquid:~1.0
 ```
 
 You then need to load the plugin. In `boostrap.php`, something like:
