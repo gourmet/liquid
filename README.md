@@ -37,7 +37,7 @@ $email->template('Hello {{ name }}', "{{ 'content' | fetch }}\n\nThis is an auto
 
 More documentation/filters/tags to come.
 
-In the meantime, read more about the library this plugin wraps over [here](/kalimatas/php-liquid)
+In the meantime, read more about the library this plugin wraps over [here](https://github.com/kalimatas/php-liquid)
 and about the liquid markup [here](https://github.com/Shopify/liquid/wiki) and
 [here](http://docs.shopify.com/themes/liquid-documentation/).
 
